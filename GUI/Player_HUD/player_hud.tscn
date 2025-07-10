@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://drmaf1y0a4gs6"]
+
+[ext_resource type="Script" uid="uid://bm5j2sgn4d8p4" path="res://GUI/Player_HUD/player_hud.gd" id="1_1pbxj"]
+[ext_resource type="Texture2D" uid="uid://c3x5fpj728jpw" path="res://GUI/Player_HUD/HealthBar.png" id="1_xhte5"]
+[ext_resource type="PackedScene" uid="uid://caty6n0nlmnbt" path="res://GUI/Player_HUD/life_gui.tscn" id="2_gian7"]
+
+[node name="PlayerHud" type="CanvasLayer"]
+script = ExtResource("1_1pbxj")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(9, 12)
+texture = ExtResource("1_xhte5")
+region_enabled = true
+region_rect = Rect2(0, 29, 18, 24)
+
+[node name="HFlowContainer" type="HFlowContainer" parent="Control"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 7.0
+offset_right = 119.0
+offset_bottom = 22.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+
+[node name="Life" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2
+
+[node name="Life2" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2
+
+[node name="Life3" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2
+
+[node name="Life4" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2
+
+[node name="Life5" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2
+
+[node name="Life6" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2
+
+[node name="Life7" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2
+
+[node name="Life8" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2
+
+[node name="Life9" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2
+
+[node name="Life10" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2
+
+[node name="Life11" parent="Control/HFlowContainer" instance=ExtResource("2_gian7")]
+layout_mode = 2

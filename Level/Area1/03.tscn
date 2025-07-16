@@ -15,4 +15,8 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAEAAEAAAAAAAEAAQADAAIAAAAAAAIAAQADAAI
 position = Vector2(241, 34)
 
 [node name="LevelTransition" parent="." instance=ExtResource("4_k5sdw")]
-position = Vector2(490, 112)
+position = Vector2(480, 112)
+level = "uid://bfbbi2a04qwvx"
+size = 1
+side = 1
+snap_to_grid = false

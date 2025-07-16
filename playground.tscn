@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bfbbi2a04qwvx"]
+[gd_scene load_steps=10 format=4 uid="uid://bfbbi2a04qwvx"]
 
 [ext_resource type="Script" uid="uid://bljir6sarocr0" path="res://Level/scripts/level.gd" id="1_o00ia"]
 [ext_resource type="PackedScene" uid="uid://3nhtembfppvf" path="res://TileMap/Plains.tscn" id="2_x1knt"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dr1wv8aqfwcy5" path="res://Props/Plants/bush.tscn" id="3_dng43"]
 [ext_resource type="PackedScene" uid="uid://ckvpmk3dfbakn" path="res://Enemies/Slime/Slime.tscn" id="4_is3ju"]
 [ext_resource type="PackedScene" uid="uid://36kmuahxs6by" path="res://Level/player_spawn.tscn" id="4_o00ia"]
+[ext_resource type="PackedScene" uid="uid://dsj281hkbfcq5" path="res://Level/level_transition.tscn" id="7_ynsuh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynsuh"]
 texture = ExtResource("3_4bqqs")
@@ -756,3 +757,24 @@ position = Vector2(641, 122)
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("4_o00ia")]
 position = Vector2(556, 114)
+
+[node name="LevelTransition" parent="." instance=ExtResource("7_ynsuh")]
+position = Vector2(320, 112)
+level = "uid://bexerj1fmgv3g"
+size = 1
+side = 0
+snap_to_grid = false
+
+[node name="LevelTransition2" parent="." instance=ExtResource("7_ynsuh")]
+position = Vector2(736, 272)
+level = "uid://bs3vhvlkfu2i5"
+size = 1
+side = 3
+snap_to_grid = false
+
+[node name="LevelTransition3" parent="." instance=ExtResource("7_ynsuh")]
+position = Vector2(752, 0)
+level = "uid://duni7jsfv2r7a"
+size = 1
+side = 2
+snap_to_grid = false

@@ -30,7 +30,7 @@ func _process(_delta):
 func _physics_process(_delta):
 	move_and_slide()
 	
-func set_direction(_new_direction : Vector2) -> bool:
+func set_direction(_new_direction : Vector2) -> bool: #so like select new direction to walk(enemy)
 	direction = _new_direction
 	if direction == Vector2.ZERO:
 		return false
@@ -46,11 +46,11 @@ func set_direction(_new_direction : Vector2) -> bool:
 	sprite.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
 	return true
 
-func update_animation(state : String) -> void:
+func update_animation(state : String) -> void: #updates the animation from the direction its facing
 	animation_player.play(state + "_" + anim_direction())
 	pass
 	
-func anim_direction() -> String:
+func anim_direction() -> String: #so like the animation on which direction to play
 	if  cardinal_direction == Vector2.DOWN:
 		return "down"
 	elif  cardinal_direction == Vector2.UP:
@@ -58,7 +58,7 @@ func anim_direction() -> String:
 	else:
 		return "side"
 		
-func _take_damage(hurt_box : HurtBox) -> void:
+func _take_damage(hurt_box : HurtBox) -> void: #hurtbox function and damage according to the player
 	if invulnerable == true:
 		return
 	hp -= hurt_box.damage

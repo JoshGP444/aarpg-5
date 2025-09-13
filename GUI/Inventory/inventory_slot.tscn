@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1mx11o0pnvmk"]
+
+[ext_resource type="Texture2D" uid="uid://ct2ai1eruncgr" path="res://Items/Sprites/Slimeball.png" id="1_8qd5n"]
+[ext_resource type="Script" uid="uid://gq2tteun1ph2" path="res://GUI/Inventory/Scripts/inventory_slot_ui.gd" id="1_f7yqn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7yqn"]
+atlas = ExtResource("1_8qd5n")
+region = Rect2(39, 73, 23, 21)
+
+[node name="InventorySlot" type="Button"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -448.0
+offset_bottom = -238.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f7yqn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = SubResource("AtlasTexture_f7yqn")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 19.0
+offset_right = 14.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 11
+text = "99"

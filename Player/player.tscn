@@ -863,8 +863,9 @@ _data = {
 radius = 6.5
 height = 13.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_p5o4e"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gu6f8"]
 radius = 4.0
+height = 10.0
 
 [sub_resource type="Animation" id="Animation_pisgm"]
 length = 0.001
@@ -993,9 +994,9 @@ shape = SubResource("CapsuleShape2D_x3vf3")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_p5o4e")
-debug_color = Color(0.617579, 0.528728, 0.244429, 0.42)
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_gu6f8")
+debug_color = Color(0.339823, 0.615551, 0.250304, 0.42)
 
 [node name="EffectAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

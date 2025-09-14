@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GameProject :3"
-config/tags=PackedStringArray("00015", "version0.1.5")
+config/tags=PackedStringArray("version0.1.6")
 run/main_scene="res://playground.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"

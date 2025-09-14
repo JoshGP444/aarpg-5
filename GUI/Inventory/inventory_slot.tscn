@@ -5,9 +5,11 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7yqn"]
 atlas = ExtResource("1_8qd5n")
-region = Rect2(39, 73, 23, 21)
+region = Rect2(4, 5, 23, 21)
 
 [node name="InventorySlot" type="Button"]
+texture_filter = 1
+texture_repeat = 1
 custom_minimum_size = Vector2(32, 32)
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,6 +21,8 @@ grow_vertical = 2
 script = ExtResource("1_f7yqn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 1
 layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0

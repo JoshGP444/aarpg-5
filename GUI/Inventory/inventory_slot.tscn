@@ -1,15 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1mx11o0pnvmk"]
 
-[ext_resource type="Texture2D" uid="uid://ct2ai1eruncgr" path="res://Items/Sprites/Slimeball.png" id="1_8qd5n"]
 [ext_resource type="Script" uid="uid://gq2tteun1ph2" path="res://GUI/Inventory/Scripts/inventory_slot_ui.gd" id="1_f7yqn"]
+[ext_resource type="Texture2D" uid="uid://dj6i7pw8j4qbu" path="res://Items/Sprites/items02.png" id="2_f7yqn"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f7yqn"]
-atlas = ExtResource("1_8qd5n")
-region = Rect2(4, 5, 23, 21)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlrrd"]
+atlas = ExtResource("2_f7yqn")
+region = Rect2(89, 101, 377, 356)
 
 [node name="InventorySlot" type="Button"]
-texture_filter = 1
-texture_repeat = 1
 custom_minimum_size = Vector2(32, 32)
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,13 +19,13 @@ grow_vertical = 2
 script = ExtResource("1_f7yqn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-texture_filter = 1
-texture_repeat = 1
 layout_mode = 0
-offset_right = 32.0
-offset_bottom = 32.0
-texture = SubResource("AtlasTexture_f7yqn")
-stretch_mode = 3
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 139.0
+offset_bottom = 127.0
+scale = Vector2(0.0635727, 0.067453)
+texture = SubResource("AtlasTexture_qlrrd")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

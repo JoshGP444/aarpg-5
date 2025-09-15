@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bfbbi2a04qwvx"]
+[gd_scene load_steps=14 format=4 uid="uid://bfbbi2a04qwvx"]
 
 [ext_resource type="Script" uid="uid://bljir6sarocr0" path="res://Level/scripts/level.gd" id="1_o00ia"]
 [ext_resource type="PackedScene" uid="uid://3nhtembfppvf" path="res://TileMap/Plains.tscn" id="2_x1knt"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://ckvpmk3dfbakn" path="res://Enemies/Slime/Slime.tscn" id="4_is3ju"]
 [ext_resource type="PackedScene" uid="uid://36kmuahxs6by" path="res://Level/player_spawn.tscn" id="4_o00ia"]
 [ext_resource type="PackedScene" uid="uid://dsj281hkbfcq5" path="res://Level/level_transition.tscn" id="7_ynsuh"]
+[ext_resource type="PackedScene" uid="uid://dt80cdf7l7g5j" path="res://Items/Item_Pickup/item_pickup.tscn" id="8_pi42a"]
+[ext_resource type="Resource" uid="uid://bk1gvwymqghm2" path="res://Items/coin.tres" id="9_h1jm5"]
+[ext_resource type="Resource" uid="uid://c4kof4seu5p60" path="res://Items/potion.tres" id="10_pio1y"]
+[ext_resource type="Resource" uid="uid://dawudg3bppgbq" path="res://Items/slime.tres" id="11_te8jg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynsuh"]
 texture = ExtResource("3_4bqqs")
@@ -778,3 +782,15 @@ level = "uid://duni7jsfv2r7a"
 size = 1
 side = 2
 snap_to_grid = false
+
+[node name="ItemPickup" parent="." instance=ExtResource("8_pi42a")]
+position = Vector2(433, 32)
+item_data = ExtResource("9_h1jm5")
+
+[node name="ItemPickup2" parent="." instance=ExtResource("8_pi42a")]
+position = Vector2(396, 32)
+item_data = ExtResource("10_pio1y")
+
+[node name="ItemPickup3" parent="." instance=ExtResource("8_pi42a")]
+position = Vector2(357, 32)
+item_data = ExtResource("11_te8jg")

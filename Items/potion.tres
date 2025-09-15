@@ -1,15 +1,26 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c4kof4seu5p60"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=8 format=3 uid="uid://c4kof4seu5p60"]
 
 [ext_resource type="Script" uid="uid://4ti3h37fusny" path="res://Items/Scripts/item_data.gd" id="1_5vqjr"]
-[ext_resource type="Texture2D" uid="uid://rv5leg4orbba" path="res://Items/Sprites/items01.png" id="2_5vqjr"]
+[ext_resource type="Script" uid="uid://iaj25c7lttnv" path="res://Items/Item_Effect/item_effect.gd" id="1_pw2eo"]
+[ext_resource type="Texture2D" uid="uid://dj6i7pw8j4qbu" path="res://Items/Sprites/items02.png" id="2_5vqjr"]
+[ext_resource type="Script" uid="uid://dsy5tbv8jenpo" path="res://Items/Item_Effect/item_effect_heal.gd" id="2_yhh2t"]
+[ext_resource type="AudioStream" uid="uid://d0qi0yyng30j0" path="res://Items/Item_Effect/healpop-46004.mp3" id="3_cvo6j"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t8xv6"]
+[sub_resource type="Resource" id="Resource_se85w"]
+script = ExtResource("2_yhh2t")
+heal_amount = 1
+audio = ExtResource("3_cvo6j")
+use_description = ""
+metadata/_custom_type_script = "uid://dsy5tbv8jenpo"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vqjr"]
 atlas = ExtResource("2_5vqjr")
-region = Rect2(64, 6, 16, 33)
+region = Rect2(662, 89, 281, 347)
 
 [resource]
 script = ExtResource("1_5vqjr")
 name = "potion"
 description = "SMALL HEALTH POTION"
-texture = SubResource("AtlasTexture_t8xv6")
+texture = SubResource("AtlasTexture_5vqjr")
+effects = Array[ExtResource("1_pw2eo")]([SubResource("Resource_se85w")])
 metadata/_custom_type_script = "uid://4ti3h37fusny"

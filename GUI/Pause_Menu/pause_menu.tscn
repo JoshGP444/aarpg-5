@@ -26,8 +26,6 @@ process_mode = 3
 script = ExtResource("1_58j35")
 
 [node name="Control" type="Control" parent="."]
-texture_filter = 1
-texture_repeat = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,7 +34,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
-texture_filter = 1
 texture_repeat = 1
 layout_mode = 1
 anchors_preset = 15
@@ -68,12 +65,9 @@ offset_top = 114.0
 offset_right = -119.0
 offset_bottom = 137.0
 grow_horizontal = 2
-text = "SlimeBall"
 autowrap_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Control"]
-texture_filter = 1
-texture_repeat = 1
 layout_mode = 0
 offset_left = 5.0
 offset_top = 33.0
@@ -83,8 +77,6 @@ scale = Vector2(0.927914, 0.874399)
 theme_override_styles/panel = SubResource("StyleBoxTexture_5w2dm")
 
 [node name="GridContainer" type="GridContainer" parent="Control/PanelContainer"]
-texture_filter = 1
-texture_repeat = 1
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 columns = 5
@@ -134,3 +126,6 @@ text = "SAVE"
 [node name="Button_Load" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 text = "LOAD"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+max_polyphony = 4
